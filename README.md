@@ -3,7 +3,7 @@
 ## Executive Summary: Drivers of State Education Expenditure
 This analysis examined how state-level enrollment demographics and institutional types influence educational spending per student. By using Machine Learning, I moved beyond simple averages to identify the specific factors that have the most significant impact on State Education Expenditure.
 
---*1. Methodology: The Ridge Regression Model*--
+**1. Methodology: The Ridge Regression Model**  
 We used a Ridge Regression model to analyze the data. This model is specifically designed to handle "interconnected" data (where factors like race, sex, and school type often overlap).
 
 Standardization: All data was "scaled" so we could compare different categories (like percentages vs. student counts) on a level playing field.
