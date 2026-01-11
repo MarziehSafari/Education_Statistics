@@ -1,5 +1,10 @@
 # Education_Statistics
 
+## Source for data: 
+<a href='https://nces.ed.gov/ipeds/'> IPEDS - National Center for Education Statistics (NCES) </a>
+
+##### *Data on year: 2020*
+
 ## Executive Summary: 
 The optimized Ridge Regression model (Alpha=100) explained approximately 38% of the variance in state education expenditure. The model favored a linear approach (Degree 1), suggesting that while demographics like [% Non-Resident Alien Students, % Private Post-baccalaureate Non-Profit 4-Year, % Full-Time Male Students, and % Asian Students] influence costs, they are not the sole drivers. The remaining 62% of variance likely stems from factors outside of enrollment data, such as regional economic conditions and specific state legislative priorities.
 
