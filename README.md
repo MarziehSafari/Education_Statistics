@@ -1,7 +1,7 @@
 # Education_Statistics
 
 ## Executive Summary: 
-Our optimized Ridge Regression model (Alpha=100) explained approximately 38% of the variance in state education expenditure. The model favored a linear approach (Degree 1), suggesting that while demographics like [% Non-Resident Alien Students, % Private Post-baccalaureate Non-Profit 4-Year, % Full-Time Male Students, and % Asian Students] influence costs, they are not the sole drivers. The remaining 62% of variance likely stems from factors outside of enrollment data, such as regional economic conditions and specific state legislative priorities.
+The optimized Ridge Regression model (Alpha=100) explained approximately 38% of the variance in state education expenditure. The model favored a linear approach (Degree 1), suggesting that while demographics like [% Non-Resident Alien Students, % Private Post-baccalaureate Non-Profit 4-Year, % Full-Time Male Students, and % Asian Students] influence costs, they are not the sole drivers. The remaining 62% of variance likely stems from factors outside of enrollment data, such as regional economic conditions and specific state legislative priorities.
 
 While a complex polynomial model (Degree 2) was tested, the validation curve confirms it suffered from high variance at low penalty levels. The simpler linear model (Degree 1) proved more stable across cross-validation folds, reaching its optimal performance at an Alpha of 100. This suggests that a more conservative, linear interpretation of the data provides the most reliable predictions for unseen state-level expenditures.
 
