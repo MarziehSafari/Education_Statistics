@@ -1,6 +1,6 @@
-Education Statistics - Budget Forecasting
+# Education Statistics - Budget Forecasting
 
-Author: Marzieh Safari
+## *Author: Marzieh Safari*
 
 Source for data:
 IPEDS - NCES
