@@ -1,39 +1,51 @@
-# Education_Statistics
+# Educational Data Analytics: From Macro-Drivers to Institutional Insights
 
-## Source for data: 
-<a href='https://nces.ed.gov/ipeds/'> IPEDS - National Center for Education Statistics (NCES) </a>
+## 🎯 Strategic Goal
+My objective is to bridge the gap between raw educational data and actionable institutional strategy. By leveraging machine learning and time-series forecasting, I aim to provide leadership with the diagnostic tools to understand current spending drivers and the predictive frameworks necessary for robust long-term budgeting and decision-making.
 
-##### *Data on year: 2020*
+## 🔍 Phase 1: Diagnostic Analysis (State-Level Expenditure)
+This phase utilized Ridge Regression to identify the demographic and institutional factors influencing state-wide educational spending.
 
-## Executive Summary: 
-The optimized Ridge Regression model (Alpha=100) explained approximately 38% of the variance in state education expenditure. The model favored a linear approach (Degree 1), suggesting that while demographics like [% Non-Resident Alien Students, % Private Post-baccalaureate Non-Profit 4-Year, % Full-Time Male Students, and % Asian Students] influence costs, they are not the sole drivers. The remaining 62% of variance likely stems from factors outside of enrollment data, such as regional economic conditions and specific state legislative priorities.
+## *Key Technical Specs*
+Model: Ridge Regression (Alpha=100)
 
-While a complex polynomial model (Degree 2) was tested, the validation curve confirms it suffered from high variance at low penalty levels. The simpler linear model (Degree 1) proved more stable across cross-validation folds, reaching its optimal performance at an Alpha of 100. This suggests that a more conservative, linear interpretation of the data provides the most reliable predictions for unseen state-level expenditures.
+## *Variance Explained:* 
+R2=0.3829 (Approx. 38% of variance)
 
+## *Key Findings:*
+Drivers: Specific demographics (Non-Resident Aliens, Private Non-Profit enrollments) were identified as significant cost influencers.
 
-### Drivers of State Education Expenditure
-This analysis examined how state-level enrollment demographics and institutional types influence educational spending per student. By using Machine Learning, I moved beyond simple averages to identify the specific factors that have the most significant impact on State Education Expenditure.
+The 62% Gap: The remaining variance suggests that factors like regional economic conditions and legislative priorities are critical external drivers.
 
-**1. Methodology: The Ridge Regression Model**  
-I used a Ridge Regression model to analyze the data. This model is specifically designed to handle "interconnected" data (where factors like race, sex, and school type often overlap).
+Efficiency Mapping: Residual plots identified states like Pennsylvania (high-cost outlier) and Idaho (low-cost outlier), highlighting areas where local policy overrides national trends.
 
-Standardization: All data was "scaled" so we could compare different categories.
+## 📈 Phase 2: Predictive Forecasting (Institutional Expense Projection)
+Building on the diagnostic phase, I developed an ARIMAX (1, 1, 0) model to project institutional expenses for the 2025–2027 fiscal period in COTC, specifically testing how enrollment shifts impact the bottom line.
 
-Predictive Power: The model achieved an R-squared score of 0.3829, meaning it successfully explains 38.29% of the differences in spending between states.
+## *Why ARIMAX?*
+While simpler models (like Holt’s Linear Trend) track momentum, the ARIMAX model incorporates Full-Time Equivalent (FTE) enrollment as an external driver.
 
-**2. Key Findings (The Coefficient Plot)**  
-The Coefficient Plot visualizes the "weight" or "influence" of each category.
+## *Accuracy:*
+88.3% historical accuracy (MAPE=11.73%).
 
-Positive Drivers: Categories with bars pointing to the right are associated with higher per-student costs. This often indicates specialized resource needs or higher operational costs for those institutions.
+## *Statistical Efficiency:*
+Achieved a lower AIC (345.38) than simpler ARIMA models, ensuring a better fit without overfitting to noise.
 
-Negative Drivers: Categories with bars pointing to the left are associated with lower per-student costs, representing areas where states might achieve greater "economies of scale."
+## *Scenario Analysis:*
+The model quantifies the "What-If"—for example, a drop of 100 students is predicted to increase the cost-per-student by $1,081.90 by 2027.
 
-**3. State Performance (The Residual Plot)**  
-The Residual Plot identifies states that do not follow the national trend.
+### 💡 Institutional Impact & Decision-Making
+By combining these methodologies, I provide a two-tier framework for educational leadership:
 
-High-Cost Outliers: States like Pennsylvania and Connecticut spend significantly more than the model predicts. This suggests unique local factors such as high cost-of-living or specific state policies that aren't captured by enrollment numbers alone.
+*Baseline Budgeting:* Use the ARIMAX "Mean Forecast" for standard planning while maintaining a contingency reserve based on the 11% historical variance.
 
-Efficient/Low-Cost Outliers: States like Idaho spend less than expected, which may indicate highly efficient resource allocation or, conversely, a potential under-investment relative to their student demographic needs.
+*Resource Allocation:* Understanding that enrollment is a moderate—but not sole—driver allows for more nuanced discussions regarding fixed costs like faculty salaries and facility maintenance.
 
-### Final Thoughts:
-**This model provides a baseline for "expected" spending. For future policy planning, the state should investigate the outlier states identified in the residual plot to understand the specific local programs or economic conditions that cause them to deviate so significantly from the national average.**
+*Future Investigation:* My ongoing goal is to incorporate the external "regional" factors identified in Phase 1 into institutional models to further reduce volatility and increase predictive power.
+
+### 🛠️ Tools & Technologies
+Python: Scikit-learn (Ridge Regression), Statsmodels (ARIMAX).
+
+Data Science: Standardization, Cross-Validation, AIC/MAPE Evaluation.
+
+Visualization: Coefficient Plots, Residual Plots, Confidence Interval Forecasting.
