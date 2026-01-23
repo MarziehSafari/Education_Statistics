@@ -17,7 +17,7 @@ as a critical external driver. By prioritizing statistical efficiency (AIC) and 
 "what-if" scenario analysis regarding how enrollment shifts impact cost-per-student. The model achieved an 88.3% historical accuracy, providing leadership with a
 robust, data-driven framework for baseline budgeting and contingency planning.
 
-"If FTE drops by 100 students per year, the model predicts the Total Expense-per-student will increase by $1081.9 by 2027."
+## *"If FTE drops by 100 students per year, the model predicts the Total Expense-per-student will increase by $1081.9 by 2027."*
 
 ### *Why ARIMAX was Selected Over Simpler Models:*
 While the simple ARIMA model showed a slightly lower historical error (Mean Absolute Percentage Error (MAPE) of 10.57% vs. 11.73%), I have prioritized the ARIMAX
