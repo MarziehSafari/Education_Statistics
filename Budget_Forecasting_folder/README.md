@@ -3,7 +3,7 @@
 ## *Author: Marzieh Safari*
 
 ### *Source for data:*
-### "<a href=\"https://nces.ed.gov/ipeds/datacenter/InstitutionList.aspx?goToReportId=1&sid=17f4a5f0-2e59-45c3-91c3-51c5674f4ccf&rtid=1\"> "IPEDS - NCES </a>"
+### <a href=\"https://nces.ed.gov/ipeds/datacenter/InstitutionList.aspx?goToReportId=1&sid=17f4a5f0-2e59-45c3-91c3-51c5674f4ccf&rtid=1\"> "IPEDS - NCES </a>
 
 ## Objectives:
 
